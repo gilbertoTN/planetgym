@@ -1,0 +1,39 @@
+<h1>Listing partners</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Colony</th>
+    <th>Entry</th>
+    <th>Sex</th>
+    <th>Birthday</th>
+    <th>Phone</th>
+    <th>Background</th>
+    <th>Observations</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @partners.each do |partner| %>
+  <tr>
+    <td><%= partner.name %></td>
+    <td><%= partner.address %></td>
+    <td><%= partner.colony %></td>
+    <td><%= partner.entry %></td>
+    <td><%= partner.sex %></td>
+    <td><%= partner.birthday %></td>
+    <td><%= partner.phone %></td>
+    <td><%= partner.background %></td>
+    <td><%= partner.observations %></td>
+    <td><%= link_to 'Show', partner %></td>
+    <td><%= link_to 'Edit', edit_partner_path(partner) %></td>
+    <td><%= link_to 'Destroy', partner, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Partner', new_partner_path %>

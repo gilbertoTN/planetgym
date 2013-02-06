@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @socio.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @socio.address %>
+</p>
+
+<p>
+  <b>Colony:</b>
+  <%= @socio.colony %>
+</p>
+
+<p>
+  <b>Entry:</b>
+  <%= @socio.entry %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @socio.sex %>
+</p>
+
+<p>
+  <b>Birthday:</b>
+  <%= @socio.birthday %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @socio.phone %>
+</p>
+
+<p>
+  <b>Background:</b>
+  <%= @socio.background %>
+</p>
+
+<p>
+  <b>Observations:</b>
+  <%= @socio.observations %>
+</p>
+
+
+<%= link_to 'Edit', edit_socio_path(@socio) %> |
+<%= link_to 'Back', socios_path %>
