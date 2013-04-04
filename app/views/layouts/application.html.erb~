@@ -11,7 +11,6 @@
 
 <link rel="stylesheet" href="/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
 <%= stylesheet_link_tag  "style.css" %>
-<%= javascript_include_tag "application" %>
 
 <link href="http://fonts.googleapis.com/css?family=Terminal+Dosis" rel="stylesheet" type="text/css" />
 <!-- jQuery -->
