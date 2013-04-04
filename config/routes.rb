@@ -1,5 +1,7 @@
 Planetgym::Application.routes.draw do
 
+  devise_for :admins
+
   resources :partners
 
   get "static_pages/contact"
