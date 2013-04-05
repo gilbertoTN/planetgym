@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require jquery.tweet
 //= require jquery.flexslider-min
-//= require custom.quicksand
 //= require jquery.prettyPhoto
+//= require custom.quicksand
 //= require menu
 //= require jquery.easing.1.3
 //= require jquery.elastislide
