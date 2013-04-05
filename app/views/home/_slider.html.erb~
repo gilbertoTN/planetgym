@@ -1,0 +1,20 @@
+  <div class="slider_container">
+		<div class="flexslider">
+	    <ul class="slides">
+	    	<li>
+<%= link_to image_tag('slider/slide1.jpg'), root_path, :alt=>"", :title=>"" %>	    		
+	    	</li>
+	    	<li>
+	    		<%= link_to image_tag('slider/slide3.jpg'), root_path, :alt=>"", :title=>"" %>	
+	    	</li>
+	    	<li>
+	    		<%= link_to image_tag('slider/slide2.jpg'), root_path, :alt=>"", :title=>"" %>	
+	    		<div class="flex-caption">
+                     <p>Image with caption text...</p>
+                </div>
+	    	</li>
+	    </ul>
+	  </div>
+   </div>
+   
+    <!-- Elastislide Carousel -->

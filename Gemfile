@@ -9,6 +9,8 @@ gem 'newrelic_rpm'
 gem 'pg'
 gem 'heroku'
 gem 'devise'
+gem 'mail_form'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
