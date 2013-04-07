@@ -1,5 +1,5 @@
 Planetgym::Application.routes.draw do
-  root :to => 'StaticPages#contact'
+  root :to => 'StaticPages#about'
 
   devise_for :admins
 

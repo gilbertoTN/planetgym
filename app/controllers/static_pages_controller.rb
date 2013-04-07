@@ -11,5 +11,6 @@ def contact
     end
   end
   def about
+    render :layout => "landing"
   end
 end
