@@ -1,22 +1,23 @@
-  <div id="header">
-  	<div class="logo"><a href="index.html"><img src="assets/logo.png" alt="logo" title="logo" class="logo_image" /></a><h1><a href="index.html">Power Gym</a></h1></div>
+<div id="header">
+  <div class="logo"><%= link_to (image_tag "logo.png", alt:"logo", title:"logo", :class=>"logo_image"),root_path %>
+  <h1><%= link_to "Planet Gym", root_path %></h1></div>
 
-    <div class="menu">
-        <ul id="main_menu">
-        	<li class="selected"><a href="index.html">home</a></li>
-            <li><a href="page.html">the club</a>
-            <ul>
-                <li><a href="page.html">services</a></li>
-                <li><a href="gallery.html">photo gallery</a></li>
-                <li><a href="videos.html">videos</a></li>
-            </ul>
-            </li>
-            <li><a href="program.html">program</a></li>
-            <li><a href="trainers.html">trainers</a></li>
-            <li><a href="blog.html">news</a></li>
-            <li><a href="contact.html">contact</a></li>
-        </ul>
-     </div>
+<div class="menu">
+  <ul id="main_menu">
+<!--    <li class="selected"><%= link_to "Inicio", root_path %></li>
+    <li><%= link_to "GYM", root_path %>
+      <ul>
+        <li><%= link_to "servicios", root_path %></a></li>
+        <li><%= link_to "fotografias", root_path %></li>
+        <li><%= link_to "videos", root_path %></li>
+      </ul>
+    </li>
+    <li><%= link_to "programa", root_path %></li>
+    <li><%= link_to "entranadores",root_path%></li>
+    <li><%= link_to "avisos y noticias", root_path %></li> -->
+    <li><%= link_to "contacto", root_path %></li>
+  </ul>
+</div>
 
   </div><!-- End of Header-->
 

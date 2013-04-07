@@ -1,5 +1,6 @@
 Planetgym::Application.routes.draw do
   root :to => 'StaticPages#contact'
+
   devise_for :admins
 
   resources :partners
@@ -13,7 +14,7 @@ Planetgym::Application.routes.draw do
   get "static_pages/help"
 
   match 'home' => 'Home#home'
-
+  match 'contacto' => 'StaticPages#contact', :as => :contacto
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
