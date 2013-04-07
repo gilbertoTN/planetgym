@@ -19,3 +19,4 @@
 //= require menu
 //= require jquery.easing.1.3
 //= require jquery.elastislide
+//= require map

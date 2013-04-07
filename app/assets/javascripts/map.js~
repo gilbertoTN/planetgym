@@ -1,39 +1,39 @@
 (function() {
+// Defining variables that need to be available to some functions
+var map, infoWindow;
 window.onload = function() {
-  var options = {
-    center: new google.maps.LatLng(40.7257, -74.0047),
-    zoom: 12,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    draggable: false
-  };
-
-  var map = new google.maps.Map(document.getElementById('map'),options)
-
-
-  var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(40.7257, -74.0047),
-      map: map,
-      title: 'Click me',
-      icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png'
-  });
-
-  //var map = new google.maps.Map(mapDiv, options);
-
-
-  // Getting values
-  //document.getElementById('getValues').onclick = function() {
-  //alert('Current Zoom level is ' + map.getZoom());
-  //alert('Current center is ' + map.getCenter());
-  alert('The current mapType is ' + map.getMapTypeId());
-  //}
-  // Changing values
-  //document.getElementById('changeValues').onclick = function() {
-  //map.setOptions({
-  //center: new google.maps.LatLng(40.6891, -74.0445),
-  //zoom: 17,
-  //mapTypeId: google.maps.MapTypeId.SATELLITE
-  //});
-  //}
+// Creating a map
+var options = {
+zoom: 15,
+center: new google.maps.LatLng(25.7407531,-100.3568071),
+mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+map = new google.maps.Map(document.getElementById('map'), options);
+// Adding a marker
+var marker = new google.maps.Marker({
+position: new google.maps.LatLng(25.7407531,-100.3568071),
+map: map,
+title: 'Click me'
+});
+google.maps.event.addListener(marker, 'click', function() {
+// Check to see if an InfoWindow already exists
+if (!infoWindow) {
+infoWindow = new google.maps.InfoWindow();
+}
+// Creating the content
+var content = '<div id="info">' +
+'<img src="img/squirrel.jpg" alt="" style="float: left;margin-right: 10px;"/>' +
+'<h2>Planet GYM</h2>' +
+'<p>Uxmal, col. Unidad Modelo, Monterrey, N.L.</p>' +
+'<p><a href="http://www.svennerberg.com">vitista Sitio Ofical</a></p>' +
+'</div>';
+// Setting the content of the InfoWindow
+infoWindow.setContent(content);
+// Opening the InfoWindow
+infoWindow.open(map, marker);
+});
+// Triggering the click event
+google.maps.event.trigger(marker, 'click');
 };
 })();
 
