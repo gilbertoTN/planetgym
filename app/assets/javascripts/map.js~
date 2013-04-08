@@ -4,14 +4,14 @@ var map, infoWindow;
 window.onload = function() {
 // Creating a map
 var options = {
-zoom: 15,
-center: new google.maps.LatLng(25.7407531,-100.3568071),
+zoom: 3,
+center: new google.maps.LatLng(37.09, -95.71),
 mapTypeId: google.maps.MapTypeId.ROADMAP
 };
 map = new google.maps.Map(document.getElementById('map'), options);
 // Adding a marker
 var marker = new google.maps.Marker({
-position: new google.maps.LatLng(25.7407531,-100.3568071),
+position: new google.maps.LatLng(40.756054, -73.986951),
 map: map,
 title: 'Click me'
 });
@@ -22,10 +22,10 @@ infoWindow = new google.maps.InfoWindow();
 }
 // Creating the content
 var content = '<div id="info">' +
-'<img src="img/squirrel.jpg" alt="" style="float: left;margin-right: 10px;"/>' +
-'<h2>Planet GYM</h2>' +
-'<p>Uxmal, col. Unidad Modelo, Monterrey, N.L.</p>' +
-'<p><a href="http://www.svennerberg.com">vitista Sitio Ofical</a></p>' +
+'<img src="img/squirrel.jpg" alt="" />' +
+'<h2>Maps are awesome</h2>' +
+'<p>Some sample text</p>' +
+'<p><a href="http://www.svennerberg.com">A sample link</a></p>' +
 '</div>';
 // Setting the content of the InfoWindow
 infoWindow.setContent(content);
