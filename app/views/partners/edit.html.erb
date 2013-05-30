@@ -1,6 +1,17 @@
-<h1>Editing partner</h1>
+<%= content_for :page_header do %>
+  <div class="page_header pagebg1">
+    <h1><%= t ".title" %></h1>
+  </div>
+<%end%>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @partner %> |
-<%= link_to 'Back', partners_path %>
+<div class="left23 left_content">
+  <%= render 'form' %>
+  <%= link_to 'Show', @partner %> |
+  <%= link_to 'Back', partners_path %>
+</div>
+<%= content_for :sc do %>
+  <%= render 'layouts/sidebar1' %>
+<%end%>
+<%= content_for :fc do %>
+  <%= render 'layouts/footercontent' %>
+<%end%>

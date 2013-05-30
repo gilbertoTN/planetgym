@@ -1,20 +1,24 @@
-  <div class="slider_container">
-		<div class="flexslider">
-	    <ul class="slides">
-	    	<li>
-<%= link_to image_tag('slider/slide1.jpg'), root_path, :alt=>"", :title=>"" %>
-	    	</li>
-	    	<li>
-	    		<%= link_to image_tag('slider/slide3.jpg'), root_path, :alt=>"", :title=>"" %>
-	    	</li>
-	    	<li>
-	    		<%= link_to image_tag('slider/slide2.jpg'), root_path, :alt=>"", :title=>"" %>
-	    		<div class="flex-caption">
-                     <p>Image with caption text...</p>
-                </div>
-	    	</li>
-	    </ul>
-	  </div>
-   </div>
+<div class="slider_container">
+  <div class="flexslider">
+    <ul class="slides">
+      <li>
+        <%= link_to image_tag('slider/slide1.jpg'), registro_path, :alt=>"", :title=>"" %>
+        <div class="flex-caption">
+          <p><%= link_to "Eres socio de planetgym, registrate",registro_path %> </p>
+        </div>
+
+      </li>
+      <li>
+        <%= link_to image_tag('slider/slide3.jpg'), root_path, :alt=>"", :title=>"" %>
+      </li>
+      <li>
+        <%= link_to image_tag('slider/slide2.jpg'), root_path, :alt=>"", :title=>"" %>
+        <div class="flex-caption">
+          <p>Sube tu foto</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
 
 

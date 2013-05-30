@@ -1,0 +1,6 @@
+es-MX:
+  activemodel:
+    models:
+      partner: Socio
+    attributes:
+        phone: Telefono

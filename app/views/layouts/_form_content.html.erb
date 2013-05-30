@@ -1,0 +1,19 @@
+<div class="form_content">
+  <h2>Dejanos un mensaje</h2>
+  <%= form_tag(contacto_path, :method => "post", :multipart => false,:id => "form1") do %>
+    <div class="form_top">
+      <div class="form_row_half">
+        <%= text_field_tag "nombre", nil, :id => "name", :placeholder=>"Tu nombre", :class=>"form_input" %>
+      </div>
+      <div class="form_row_half">
+        <%= text_field_tag "email", nil, :id => "email", :placeholder=>"Tu correo electronico", :class=>"form_input" %>
+      </div>
+      <div class="form_row">
+        <%= text_area_tag "message", nil, :id => "message", placeholder: "Escribenos tu mensaje aqui", :class=>"form_textarea" %>
+      </div>
+      <div class="form_bottom">
+        <%= submit_tag "Enviar",:class => "form_submit" %>
+      </div>
+    </div>
+  <% end %>
+</div>

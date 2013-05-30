@@ -1,20 +1,17 @@
 Planetgym::Application.routes.draw do
-  root :to => 'StaticPages#about'
-
-  devise_for :admins
-
+  match 'auth/:provider/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+  root :to => 'Home#home'
   resources :partners
-
   get "static_pages/contact"
-
   get "static_pages/about"
-
   get "static_pages/home"
-
   get "static_pages/help"
-
   match 'home' => 'Home#home'
   match 'contacto' => 'StaticPages#contact', :as => :contacto
+  match 'registro' => 'Partners#new', :as => :registro
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

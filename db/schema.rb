@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130206050403) do
+ActiveRecord::Schema.define(:version => 20130410054216) do
 
-  create_table "socios", :force => true do |t|
+  create_table "partners", :force => true do |t|
     t.string   "name"
     t.string   "address"
     t.string   "colony"
@@ -23,8 +23,25 @@ ActiveRecord::Schema.define(:version => 20130206050403) do
     t.string   "phone"
     t.boolean  "background"
     t.string   "observations"
+    t.string   "email"
+    t.string   "link"
+    t.string   "image"
+    t.string   "provider"
+    t.string   "uid"
+    t.boolean  "active"
+    t.boolean  "publish"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
 end

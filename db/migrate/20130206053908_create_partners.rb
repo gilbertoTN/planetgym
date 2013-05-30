@@ -10,8 +10,20 @@ class CreatePartners < ActiveRecord::Migration
       t.string :phone
       t.boolean :background
       t.string :observations
+      t.string :email
+      t.string :link
+      t.string :image
+      t.string :provider
+      t.string :uid
+      t.boolean :active
+      t.boolean :publish
 
       t.timestamps
     end
   end
+
+  def down
+    drop_table :partners
+  end
+
 end
