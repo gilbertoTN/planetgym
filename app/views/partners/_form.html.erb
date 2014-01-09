@@ -1,3 +1,4 @@
+<%= params[:background].inspect %>
 <div class="form_content">
   <%= form_for(@partner, :id => "form1") do |f| %>
     <div class="form_top">
@@ -6,7 +7,7 @@
           <h2><%= pluralize(@partner.errors.count, "error") %> prohibited this partner from being saved:</h2>
           <ul>
             <% @partner.errors.full_messages.each do |msg| %>
-              <li><%=  msg %></li>
+              <li><%= t(msg) %></li>
             <% end %>
           </ul>
         </div>
@@ -25,6 +26,12 @@
         <%= f.label t :name %><br />
         <%= f.text_field :name, :class=>"form_input", :placeholder => "ej. Pedro Torres " %>
       </div>
+
+      <div class="form_row_half">
+        <%= f.label t :number_partner %><br />
+        <%= f.text_field :number_partner, :class=>"form_input", :placeholder => "28" %>
+      </div>
+
       <div class="form_row_half">
         <%= f.label t :email %><br />
         <%= f.text_field :email, :class=>"form_input", :placeholder => "ej. ptorres@hotmail.com" %>
@@ -46,7 +53,7 @@
         <%= f.label t :birthday %><br />
         <%= f.text_field :birthday, :class => "form_input", :placeholder=>"Selecciona una fecha " %>
       </div>
-      <div class="form_row">
+      <div class="form_row_half">
         <%= f.label t :phone %><br />
         <%= f.text_field :phone, :class => "form_input", :placeholder=>"ej. 81-89-82-32" %>
       </div>
@@ -73,6 +80,7 @@
         <%= f.text_area :observations     , :class => "form_textarea" %>
       </div>
       <div class="form_bottom">
+        <%= f.hidden_field :status, { :value => true } %>
         <%= f.submit "Listo!",:class => "form_submit" %>
       </div>
     </div>

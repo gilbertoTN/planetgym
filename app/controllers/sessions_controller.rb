@@ -3,12 +3,16 @@ class SessionsController < ApplicationController
     user = User.from_omniauth(env["omniauth.auth"])
     partner = Partner.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
-    redirect_to edit_partner_path(partner)
+    unless partner.status
+      redirect_to edit_partner_path(partner)
+    else
+      redirect_to dashboard_path
+    end
     logger.debug env["omniauth.auth"]
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url
+    redirect_to dashboard_path
   end
 end

@@ -11,6 +11,8 @@ Planetgym::Application.routes.draw do
   match 'home' => 'Home#home'
   match 'contacto' => 'StaticPages#contact', :as => :contacto
   match 'registro' => 'Partners#new', :as => :registro
+  match 'login' => 'StaticPages#login', :as => :login
+  match 'socio' => 'Partners#dashboard', :as => :dashboard
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

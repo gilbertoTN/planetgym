@@ -41,7 +41,6 @@ class PartnersController < ApplicationController
   # POST /partners.json
   def create
     @partner = Partner.new(params[:partner])
-
     respond_to do |format|
       if @partner.save
         format.html { redirect_to @partner, notice: 'Partner was successfully created.' }
@@ -56,8 +55,9 @@ class PartnersController < ApplicationController
   # PUT /partners/1
   # PUT /partners/1.json
   def update
-    @partner = Partner.find(params[:id])
 
+
+    @partner = Partner.find(params[:id])
     respond_to do |format|
       if @partner.update_attributes(params[:partner])
         format.html { redirect_to @partner, notice: 'Partner was successfully updated.' }
@@ -80,4 +80,15 @@ class PartnersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def dashboard
+    unless current_user
+      redirect_to root_path
+    else
+      partner =  Partner.find_by_uid(current_user.uid) 
+      redirect_to edit_partner_path(partner) unless partner.status
+    end
+  end
+
 end

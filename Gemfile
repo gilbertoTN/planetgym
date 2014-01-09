@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.10'
 gem 'newrelic_rpm'
 
 # Bundle edge Rails instead:
@@ -23,6 +23,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development do
+  gem 'xray-rails'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

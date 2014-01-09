@@ -215,3 +215,4 @@ es-MX:
   observations: Observasiones o comentarios
   email: Correo electronico
   activerecord.errors.models.partner.attributes.phone.blank: Telefono
+  number_partner: Numero de Socio

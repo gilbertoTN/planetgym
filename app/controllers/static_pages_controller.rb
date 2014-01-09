@@ -1,6 +1,4 @@
 class StaticPagesController < ApplicationController
-  def home
-  end
 
   def contact
     unless params.blank?
@@ -10,7 +8,13 @@ class StaticPagesController < ApplicationController
       end
     end
   end
+
   def about
     render :layout => "landing"
   end
+
+  def login
+
+  end
+
 end

@@ -8,7 +8,7 @@ class CreatePartners < ActiveRecord::Migration
       t.string :sex
       t.date :birthday
       t.string :phone
-      t.boolean :background
+      t.string :background
       t.string :observations
       t.string :email
       t.string :link
