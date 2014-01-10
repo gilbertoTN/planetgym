@@ -2,8 +2,9 @@ class Partner < ActiveRecord::Base
 
   attr_accessible :address, :background, :birthday, :colony, :entry, :name, :observations, :phone, :sex, :email, :image, :uid,:provider, :link,:active,:publish, :number_partner, :status
 
-  validates :address, :background, :birthday, :colony, :entry, :name, :observations, :phone, :sex, :email, :image, :uid,:provider,:number_partner, :status, :presence => true
+  validates :address, :background, :birthday, :colony, :entry, :name,  :phone, :sex, :email, :image, :uid,:provider,:number_partner, :status, :presence => true
 
+  validates :number_partner, :uniqueness => true
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider,:uid)).first_or_initialize.tap do |partner|
