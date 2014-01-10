@@ -1,5 +1,7 @@
 es-MX:
   partners:
     edit:
-      title: Verifica tu información
+      title: Actualizar información
+  update_partner_success: Socio actualizado exitosamente
+  assistance: Asistencia
 

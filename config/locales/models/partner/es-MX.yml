@@ -1,6 +1,25 @@
 es-MX:
-  activemodel:
+  activerecord:
     models:
       partner: Socio
     attributes:
+      partner:
         phone: Telefono
+        name: Nombre
+        address: Calle y numero
+        colony: Colonia
+        entry: Fecha de Ingreso
+        sex: Genero
+        birthday: Fecha de nacimiento
+        phone: Telefono
+        background: ¿Haz realizado ejercicio anteriormente en un gimnasio?
+        image: Imagen
+        observations: Observasiones o comentarios
+        email: Correo electronico
+        number_partner: Numero de Socio
+    errors:
+      models:
+        partner:
+          attributes:
+            background:
+              blank: contesta la pregunta

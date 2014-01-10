@@ -1,4 +1,11 @@
 es-MX:
+  activerecord:
+    errors:
+      template:
+        body: ! 'Revise que los siguientes campos sean válidos:'
+        header:
+         one: ! '%{model} no pudo guardarse debido a 1 error'
+         other: ! '%{model} no pudo guardarse debido a %{count} errores'
   date:
     abbr_day_names:
     - dom
@@ -111,11 +118,11 @@ es-MX:
       invalid: es inválido
       less_than: debe ser menor que %{count}
       less_than_or_equal_to: debe ser menor o igual que %{count}
-      not_a_number: no es un número
-      not_an_integer: debe ser un entero
+      not_a_number: debe ser un número
+      not_an_integer: debe ser un número entero
       odd: debe ser un número non
       record_invalid: ! 'La validación falló: %{errors}'
-      taken: ya ha sido tomado
+      taken: ya existe
       too_long:
         one: es demasiado largo (máximo 1 caracter)
         other: es demasiado largo (máximo %{count} caracteres)
@@ -125,11 +132,6 @@ es-MX:
       wrong_length:
         one: longitud errónea (debe ser de 1 caracter)
         other: longitud errónea (debe ser de %{count} caracteres)
-    template:
-      body: ! 'Revise que los siguientes campos sean válidos:'
-      header:
-        one: ! '%{model} no pudo guardarse debido a 1 error'
-        other: ! '%{model} no pudo guardarse debido a %{count} errores'
   helpers:
     select:
       prompt: Por favor selecciona
@@ -196,13 +198,6 @@ es-MX:
       long: ! '%A, %d de %B de %Y a las %I:%M %p'
       short: ! '%d de %b a las %H:%M hrs'
     pm: pm
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
-  activerecord:
-    errors:
-      <<: *errors
   name: Nombre
   address: Calle y numero
   colony: Colonia
@@ -214,5 +209,6 @@ es-MX:
   image: Imagen
   observations: Observasiones o comentarios
   email: Correo electronico
-  activerecord.errors.models.partner.attributes.phone.blank: Telefono
   number_partner: Numero de Socio
+  edit: Editar
+  ok: Listo!
