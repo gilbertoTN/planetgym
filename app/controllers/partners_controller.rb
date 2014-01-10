@@ -2,11 +2,15 @@ class PartnersController < ApplicationController
   # GET /partners
   # GET /partners.json
   def index
+    if current_user.uid == "589571332"
     @partners = Partner.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @partners }
+    end
+    else
+      redirect_to root_path
     end
   end
 
@@ -60,7 +64,7 @@ class PartnersController < ApplicationController
     @partner = Partner.find(params[:id])
     respond_to do |format|
       if @partner.update_attributes(params[:partner])
-        format.html { redirect_to @partner, notice: 'Partner was successfully updated.' }
+        format.html { redirect_to @partner, notice: t(:update_partner_success) }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -86,8 +90,8 @@ class PartnersController < ApplicationController
     unless current_user
       redirect_to root_path
     else
-      partner =  Partner.find_by_uid(current_user.uid) 
-      redirect_to edit_partner_path(partner) unless partner.status
+      @partner =  Partner.find_by_uid(current_user.uid) 
+      redirect_to edit_partner_path(partner) unless @partner.status
     end
   end
 
