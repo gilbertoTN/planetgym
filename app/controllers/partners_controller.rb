@@ -91,7 +91,7 @@ class PartnersController < ApplicationController
       redirect_to root_path
     else
       @partner =  Partner.find_by_uid(current_user.uid) 
-      redirect_to edit_partner_path(partner) unless @partner.status
+      redirect_to edit_partner_path(@partner) unless @partner.status
     end
   end
 

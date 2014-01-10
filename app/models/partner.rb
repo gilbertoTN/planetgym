@@ -11,7 +11,7 @@ class Partner < ActiveRecord::Base
     where(auth.slice(:provider,:uid)).first_or_initialize.tap do |partner|
     partner.name     = auth.info.name
     partner.email    = auth.extra.raw_info.email
-    unless auth.extra.raw_info.location.nil?
+    unless  auth.extra.raw_info.location.nil?
       partner.address  = auth.extra.raw_info.location.name
     else
       partner.address  = "Direccion no encontrada"
