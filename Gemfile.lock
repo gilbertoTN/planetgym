@@ -38,6 +38,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    dynamic_form (1.1.4)
     erubis (2.7.0)
     excon (0.31.0)
     execjs (2.0.2)
@@ -149,6 +150,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  dynamic_form
   heroku
   jquery-rails
   mail_form
