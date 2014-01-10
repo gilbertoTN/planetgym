@@ -1,20 +1,14 @@
-<%= params[:background].inspect %>
 <div class="form_content">
   <%= form_for(@partner, :id => "form1") do |f| %>
     <div class="form_top">
       <% if @partner.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@partner.errors.count, "error") %> prohibited this partner from being saved:</h2>
-          <ul>
-            <% @partner.errors.full_messages.each do |msg| %>
-              <li><%= t(msg) %></li>
-            <% end %>
-          </ul>
+         <%= error_messages_for @partner %>
         </div>
       <% end %>
 
       <div class="form_row">
-        <%= f.label t :image %> <br/>
+        <%= f.label Partner.human_attribute_name(:image) %> <br/>
         <% if @partner.image != nil %>
           <%= image_tag @partner.image %>
         <%else%>
@@ -23,42 +17,42 @@
       </div>
 
       <div class="form_row_half">
-        <%= f.label t :name %><br />
+        <%= f.label Partner.human_attribute_name(:name) %><br />
         <%= f.text_field :name, :class=>"form_input", :placeholder => "ej. Pedro Torres " %>
       </div>
 
       <div class="form_row_half">
-        <%= f.label t :number_partner %><br />
+        <%= f.label Partner.human_attribute_name(:number_partner) %><br />
         <%= f.text_field :number_partner, :class=>"form_input", :placeholder => "28" %>
       </div>
 
       <div class="form_row_half">
-        <%= f.label t :email %><br />
+        <%= f.label Partner.human_attribute_name(:email) %><br />
         <%= f.text_field :email, :class=>"form_input", :placeholder => "ej. ptorres@hotmail.com" %>
       </div>
 
       <div class="form_row_half">
-        <%= f.label t :address %><br />
+        <%= f.label Partner.human_attribute_name(:address) %><br />
         <%= f.text_field :address, :class=>"form_input", :placeholder=>"ej. Uxmal 3290" %>
       </div>
       <div class="form_row_half">
-        <%= f.label t :colony %><br />
+        <%= f.label Partner.human_attribute_name(:colony) %><br />
         <%= f.text_field :colony, :class => "form_input", :placeholder=>"Unidad Modelo" %>
       </div>
       <div class="form_row_half">
-        <%= f.label t :entry %><br />
+        <%= f.label Partner.human_attribute_name(:entry) %><br />
         <%= f.text_field :entry, :class => "form_input", :placeholder=>"Selecciona una fecha" %>
       </div>
       <div class="form_row_half">
-        <%= f.label t :birthday %><br />
+        <%= f.label Partner.human_attribute_name(:birthday) %><br />
         <%= f.text_field :birthday, :class => "form_input", :placeholder=>"Selecciona una fecha " %>
       </div>
       <div class="form_row_half">
-        <%= f.label t :phone %><br />
+        <%= f.label Partner.human_attribute_name(:phone) %><br />
         <%= f.text_field :phone, :class => "form_input", :placeholder=>"ej. 81-89-82-32" %>
       </div>
      <div class="form_row">
-        <%= f.label t :sex %><br />
+        <%= f.label Partner.human_attribute_name(:sex) %><br />
         <fieldset>
           <%= f.radio_button :sex, "male" %>
           <label for="male">Hombre</label>
@@ -67,7 +61,7 @@
         </fieldset>
       </div>
    <div class="form_row">
-        <%= f.label t :background %>
+        <%= f.label  Partner.human_attribute_name(:background) %>
         <fieldset>
           <%= f.radio_button :background, "si" %>
           <label for="si">Si</label>
@@ -76,7 +70,7 @@
         </fieldset>
       </div>
       <div class="form_row">
-        <%= f.label t :observations %><br />
+        <%= f.label Partner.human_attribute_name(:observations) %><br />
         <%= f.text_area :observations     , :class => "form_textarea" %>
       </div>
       <div class="form_bottom">
