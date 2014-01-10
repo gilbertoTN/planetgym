@@ -5,6 +5,7 @@ class Partner < ActiveRecord::Base
   validates :address, :background, :birthday, :colony, :entry, :name,  :phone, :sex, :email, :image, :uid,:provider,:number_partner, :status, :presence => true
 
   validates :number_partner, :uniqueness => true
+  validates_numericality_of :number_partner, :greater_than => 0
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider,:uid)).first_or_initialize.tap do |partner|
