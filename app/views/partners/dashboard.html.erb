@@ -1,11 +1,13 @@
 <%= content_for :page_header do %>
   <div class="page_header pagebg1">
     <h1>Mi cuenta</h1>
+    <%= link_to t(:edit), edit_partner_path(@partner), :class => "header_bt" %>
+    <%= link_to t(:assistance), dashboard_path, :class => "header_bt" %>
+
   </div>
 <%end%>
 
-<%= current_user.inspect %>
 
 <div class="left23 left_content">
-  <h1>Hola dashboard</h1>
+  <h1>Proximante aqui veras tu asistensia al gimnasio, avisos, etc.</h1>
 </div>
