@@ -1,50 +1,61 @@
+<%= content_for :page_header do %>
+  <div class="page_header pagebg1">
+    <h1>Verifica tu información</h1>
+  </div>
+<%end%>
+
+<div class="left23 left_content">
+
 <p id="notice"><%= notice %></p>
 
+<h2>Información personal</h2>
+
 <p>
-  <b>Name:</b>
+<b><%= t(:name) %>:</b>
   <%= @partner.name %>
 </p>
 
 <p>
-  <b>Address:</b>
+<b><%= t(:address) %>:</b>
   <%= @partner.address %>
 </p>
 
 <p>
-  <b>Colony:</b>
+<b><%= t(:colony) %>:</b>
   <%= @partner.colony %>
 </p>
 
 <p>
-  <b>Entry:</b>
+<b><%= t(:entry) %>:</b>
   <%= @partner.entry %>
 </p>
 
 <p>
-  <b>Sex:</b>
+<b><%= t(:sex) %></b>
   <%= @partner.sex %>
 </p>
 
 <p>
-  <b>Birthday:</b>
+<b><%= t(:birthday) %>:</b>
   <%= @partner.birthday %>
 </p>
 
 <p>
-  <b>Phone:</b>
+<b><%= t(:phone) %>:</b>
   <%= @partner.phone %>
 </p>
 
 <p>
-  <b>Background:</b>
+<b><%= t(:background) %>:</b>
   <%= @partner.background %>
 </p>
 
 <p>
-  <b>Observations:</b>
+<b><%= t(:observations) %>:</b>
   <%= @partner.observations %>
-</p>
+  </p>
 
+<%= link_to t(:ok), dashboard_path(@partner), :class => "header_bt" %>
+<%= link_to t(:edit), edit_partner_path(@partner), :class => "header_bt" %>
 
-<%= link_to 'Edit', edit_partner_path(@partner) %> |
-<%= link_to 'Back', partners_path %>
+</div>
