@@ -11,51 +11,51 @@
 <h2>Información personal</h2>
 
 <p>
-<b><%= t(:name) %>:</b>
+<b><%= Partner.human_attribute_name(:name) %>:</b>
   <%= @partner.name %>
 </p>
 
 <p>
-<b><%= t(:address) %>:</b>
+<b><%= Partner.human_attribute_name(:address) %>:</b>
   <%= @partner.address %>
 </p>
 
 <p>
-<b><%= t(:colony) %>:</b>
+<b><%= Partner.human_attribute_name(:colony) %>:</b>
   <%= @partner.colony %>
 </p>
 
 <p>
-<b><%= t(:entry) %>:</b>
+<b><%= Partner.human_attribute_name(:entry) %>:</b>
   <%= @partner.entry %>
 </p>
 
 <p>
-<b><%= t(:sex) %></b>
+<b><%= Partner.human_attribute_name(:sex) %></b>
   <%= @partner.sex %>
 </p>
 
 <p>
-<b><%= t(:birthday) %>:</b>
+<b><%= Partner.human_attribute_name(:birthday) %>:</b>
   <%= @partner.birthday %>
 </p>
 
 <p>
-<b><%= t(:phone) %>:</b>
+<b><%= Partner.human_attribute_name(:phone) %>:</b>
   <%= @partner.phone %>
 </p>
 
 <p>
-<b><%= t(:background) %>:</b>
+<b><%= Partner.human_attribute_name(:background) %>:</b>
   <%= @partner.background %>
 </p>
 
 <p>
-<b><%= t(:observations) %>:</b>
+<b><%= Partner.human_attribute_name(:observations) %>:</b>
   <%= @partner.observations %>
   </p>
 
-<%= link_to t(:ok), dashboard_path(@partner), :class => "header_bt" %>
+<%= link_to t(:ok), dashboard_path, :class => "header_bt" %>
 <%= link_to t(:edit), edit_partner_path(@partner), :class => "header_bt" %>
 
 </div>
